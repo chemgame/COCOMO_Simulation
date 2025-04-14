@@ -4,7 +4,7 @@ I do not own rights to this force field. I have developed some codes that helps 
 
 # References: 
 1) J. Chem. Theory Comput. 2023, 19, 2, 669–678.
-2) 2) J. Chem. Theory Comput. 2025, 21, 4, 2095–2107
+2) J. Chem. Theory Comput. 2025, 21, 4, 2095–2107.
 
 N.B. Although the COCOMO2 model supports simulations of multidomain proteins, this functionality is not yet included in this repository. The current version supports IDR/RNA simulations only.
 Functionality of all codes are available via code_name.py -h
