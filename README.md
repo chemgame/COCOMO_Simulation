@@ -1,15 +1,15 @@
 # cocomo
 This repository contains codes to run MD simulations using the COCOMO force field developed by Feig and coworkers. 
-I do not own rights to this force field. I have developed some codes that helps the user run simulations using the COCOMO force field in a streamlined fashion.
+I **do not** own rights to this force field. I have developed some codes that helps the user run simulations using the COCOMO force field in a streamlined fashion.
 
-# References: 
+## References
 1) J. Chem. Theory Comput. 2023, 19, 2, 669–678.
 2) J. Chem. Theory Comput. 2025, 21, 4, 2095–2107.
 
-N.B. Although the COCOMO2 model supports simulations of multidomain proteins, this functionality is not yet included in this repository. The current version supports IDR/RNA simulations only.
+**N.B.** Although the COCOMO2 model supports simulations of multidomain proteins, this functionality is not yet included in this repository. The current version supports IDR/RNA simulations only.
 Functionality of all codes are available via code_name.py -h
 
-# Description:
+## Description
 The COCOMO force field defines a single-bead-per-residue coarse grained model for molecular dynamics of proteins and RNA. This helps accelerate simulations of processes such as biocondensate formation via liquid-liquid phase separation. Please read the papers in the reference for details.
 This repositiory contains the following codes:
 
@@ -26,8 +26,8 @@ This repositiory contains the following codes:
 
 All the programs can be used as stand-alone codes or may be used as modules imported in external codes.
 
-# Usage:
+## Usage
 ```python simulation.py -c config.yaml```
 
-# Contact: 
+## Contact
 saumyak.mukherjee@biophys.mpg.de
