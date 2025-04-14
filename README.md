@@ -30,3 +30,5 @@ This repositiory contains the following codes:
 9. contacts.py: Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
 
 10. center.py: Recenter selected atoms in the trajectory.
+
+Contact: saumyak.mukherjee@biophys.mpg.de
