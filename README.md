@@ -22,6 +22,8 @@ This repositiory contains the following codes:
 9. contacts.py: Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
 10. center.py: Recenter selected atoms in the trajectory.
 
+All the programs can be used as stand-alone codes or may be used as modules imported in external codes.
+
 Usage:
 python simulation.py -c config.yaml
 
