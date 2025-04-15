@@ -8,7 +8,7 @@ The COCOMO force field defines a single-bead-per-residue coarse grained model fo
 The following codes are included in this repository:
 
 ## Table of contents
-- [seq2len.py](#```seq2len.py```)
+- [seq2len.py](#seq2len.py)
 - [gen_slab.py](#gen_slab.py)
 - [genpdb_cocomo.py](#genpdb_cocomo,py)
 - [cocomo.py/cocomo2.py](#cocomo.py/cocomo2.py)
