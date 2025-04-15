@@ -18,6 +18,21 @@ Functionality of all codes are available via code_name.py -h
 The COCOMO force field defines a single-bead-per-residue coarse grained model for molecular dynamics of proteins and RNA. This helps accelerate simulations of processes such as biocondensate formation via liquid-liquid phase separation. Please read the papers in the reference for details.
 This repositiory contains the following codes:
 
+<details>
+<summary>seq2len.py</summary>
+<br>
+This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
+```
+usage: seq2len.py [-h] -s
+
+Estimate minimum box length from a protein sequence
+
+options:
+  -h, --help        show this help message and exit
+  -s , --sequence   Protein sequence (str)
+```
+</details>
+
 ### seq2len.py
 This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
 ```
