@@ -14,7 +14,7 @@ The COCOMO force field defines a single-bead-per-residue coarse grained model fo
 This repositiory contains the following codes:
 
 1. ```seq2len.py```: This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
-```
+```bash
 usage: seq2len.py [-h] -s
 
 Estimate minimum box length from a protein sequence
