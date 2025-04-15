@@ -10,7 +10,7 @@ The following codes are included in this repository:
 ## Table of contents
 - [seq2len.py](#seq2len.py)
 - [gen_slab.py](#gen_slab.py)
-- [genpdb_cocomo.py](#genpdb_cocomo,py)
+- [genpdb_cocomo.py](#genpdb_cocomo.py)
 - [cocomo.py/cocomo2.py](#cocomo.py/cocomo2.py)
 - [dcd2pdbFrame.py](#dcd2pdbFrame.py)
 - [simulation.py](#simulation.py)
@@ -19,7 +19,7 @@ The following codes are included in this repository:
 - [contacts.py](#contacts.py)
 - [center.py](#center.py)
 
-### ```seq2len.py```
+### seq2len.py
 This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
 ```
 usage: seq2len.py [-h] -s
@@ -30,8 +30,8 @@ options:
   -h, --help        show this help message and exit
   -s , --sequence   Protein sequence (str)
 ```
-### ```gen_slab.py```
-This code generates the intitial simulation box. It takes a sequence file as an input. This file must have three coulmns: PRO/RNA number-of-chains sequence. PRO/RNA tells the code the type of biomolecule to consider. Initially chains can be placed near the box center or randomly inthe box. The initial chain configuration can be coiled or straight.
+### gen_slab.py
+This code generates the initial simulation box. It takes a sequence file as an input. This file must have three columns: PRO/RNA number-of-chains sequence. PRO/RNA tells the code the type of biomolecule to consider. Initially chains can be placed near the box center or randomly inthe box. The initial chain configuration can be coiled or straight.
 ```
 usage: gen_slab.py [-h] -s  -o  -box    [-d] [-g] [-p]
 
@@ -48,7 +48,7 @@ options:
   -g , --geometry       Geometry for chain generation: 'straight' or 'coil'. Default: 'straight'.
   -p , --position       Positioning of chains in the box: 'center' or 'random'. Default: 'center'.
 ```
-### ```genpdb_cocomo.py```
+### genpdb_cocomo.py
 This code generates a pdb file that is compatible with the way the cocomo scripts deermine system topology.
 ```
 Generate input PDB for COCOCMO simulation
@@ -63,7 +63,7 @@ I/O:
 Elastic network:
   -el , --elastic   Chains for elastic bonds (str) [default: " "]
 ```
-### ```cocomo.py```/```cocomo2.py```
+### cocomo.py/cocomo2.py
 These are the main force field and simulation scripts for COCOMO and COCOMO2.
 ```
 usage: cocomo.py [-h] [-prm]
@@ -74,7 +74,7 @@ options:
   -h, --help            show this help message and exit
   -prm , --parameters   Input parameter file (str) [default: params.dat]
 ```
-### ```dcd2pdbFrame.py```
+### dcd2pdbFrame.py
 This scripts generates PDB file from a a DCD trajectory. The time frame can be given as input. By default it generates the PDB for the last frame.
 ```
 usage: dcd2pdbFrame.py [-h] -i  -top  -o  [-dump]
@@ -90,7 +90,7 @@ Required arguments:
   -o , --outfile        Output PDB file (str)
   -dump , --dumpframe   Time frame to extract in ps (float) [default: -1]
 ```
-### ```simulation.py```
+### simulation.py
 This scripts streamliunes the simulation process. It takes a configuration (YAML format) as input.
 ```
 usage: simulation.py [-h] [-c]
@@ -102,7 +102,7 @@ options:
   -h, --help      show this help message and exit
   -c , --config   Path to YAML configuration file (default: config.yaml)
 ```
-### ```gen_config.py```
+### gen_config.py
 Generates a YAML configuration file for the simulation. Be default it generates the default configurations. These can be tuned using user-input flags.
 ```
 usage: gen_config.py [-h] [-s] [-c] [-r] [-f] [-T] [-p] [-t] [-F] [-em] [-en] [-eos] [-eod] [-es] [-ep] [-epi] [-eax] [-eay] [-eaz] [-egg] [-echk] [-pm] [-pn] [-pos] [-pod] [-ps] [-pp] [-ppi] [-pax] [-pay] [-paz] [-pg] [-pchk] [-b] [-g] [-d] [-ca] [-sa] [-cd] [-cp] [-tp] [-ip]
@@ -179,7 +179,7 @@ options:
   -l , --log            Main simulation log file (default: "simulation.log")
   -o , --output         Output YAML file name (default: "config.yaml")
 ```
-### ```gyrate.py```
+### gyrate.py
 Calculate time-trace of radius of gyration of the system.
 ```
 usage: gyrate.py [-h] -f  -s  [-o] [-b] [-e] [-dt]
@@ -195,7 +195,7 @@ options:
   -e , --end          End time in ps. If not specified, process until the end of trajectory. (default: None)
   -dt , --skip        Process every nth frame (default: 1) (default: 1)
 ```
-### ```contacts.py```
+### contacts.py
 Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
 ```
 usage: contacts.py [-h] -f  -s  [-b] [-e] [-dt] [-o [...]] [-c]
@@ -213,7 +213,7 @@ options:
                         Chain pair specifiers (e.g., AA, AB) (default: None)
   -c , --cutoff         Cutoff in Å (default: 5.0)
 ```
-### ```center.py```
+### center.py
 Recenter selected atoms in the trajectory.
 ```
 usage: center.py [-h] [-f] -s  -sel  -o  [-b] [-e] [-sk]
