@@ -24,14 +24,52 @@ options:
   -s , --sequence   Protein sequence (str)
 ```
 2. ```gen_slab.py```: This code generates the intitial simulation box. It takes a sequence file as an input. This file must have three coulmns: PRO/RNA number-of-chains sequence. PRO/RNA tells the code the type of biomolecule to consider. Initially chains can be placed near the box center or randomly inthe box. The initial chain configuration can be coiled or straight.
-4. ```genpdb_cocomo.py```: This code generates a pdb file that is compatible with the way the cocomo scripts deermine system topology. 
-5. ```cocomo.py```/```cocomo2.py```: These are the main force field and simulation scripts for COCOMO and COCOMO2. 
-6. ```dcd2pdbFrame.py```: This scripts generates PDB file from a a DCD trajectory. The time frame can be given as input. By default it generates the PDB for the last frame.
-7. ```simulation.py```: This scripts streamliunes the simulation process. It takes a configuration (YAML format) as input.
-8. ```gen_config.py```: Generates a YAML configuration file for the simulation. Be default it generates the default configurations. These can be tuned using user-input flags.
-9. ```gyrate.py```: Calculate time-trace of radius of gyration of the system.
-10. ```contacts.py```: Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
-11. ```center.py```: Recenter selected atoms in the trajectory.
+```
+usage: gen_slab.py [-h] -s  -o  -box    [-d] [-g] [-p]
+
+Generate a PDB file with protein/RNA chains arranged in a 3D simulation box
+
+options:
+  -h, --help            show this help message and exit
+  -s , --seq_file       Path to the sequence file. Each line: [type PRO/RNA] [chain_count] [sequence].
+  -o , --out_file       Output PDB file name.
+  -box   , --box_size   
+                        Box dimensions in nm (Lx Ly Lz).
+  -d , --chain_distance 
+                        Distance (nm) between 2 chains if exactly two. Default: 0.1 nm.
+  -g , --geometry       Geometry for chain generation: 'straight' or 'coil'. Default: 'straight'.
+  -p , --position       Positioning of chains in the box: 'center' or 'random'. Default: 'center'.
+```
+3. ```genpdb_cocomo.py```: This code generates a pdb file that is compatible with the way the cocomo scripts deermine system topology.
+```
+Generate input PDB for COCOCMO simulation
+
+options:
+  -h, --help        show this help message and exit
+
+I/O:
+  -i , --infile     Input PDB file (str)
+  -o , --outfile    Output PDB file (str) [default: cocomo_input.pdb]
+
+Elastic network:
+  -el , --elastic   Chains for elastic bonds (str) [default: " "]
+```
+4. ```cocomo.py```/```cocomo2.py```: These are the main force field and simulation scripts for COCOMO and COCOMO2.
+```
+usage: cocomo.py [-h] [-prm]
+
+Run COCOCMO MD simulation
+
+options:
+  -h, --help            show this help message and exit
+  -prm , --parameters   Input parameter file (str) [default: params.dat]
+```
+7. ```dcd2pdbFrame.py```: This scripts generates PDB file from a a DCD trajectory. The time frame can be given as input. By default it generates the PDB for the last frame.
+8. ```simulation.py```: This scripts streamliunes the simulation process. It takes a configuration (YAML format) as input.
+9. ```gen_config.py```: Generates a YAML configuration file for the simulation. Be default it generates the default configurations. These can be tuned using user-input flags.
+10. ```gyrate.py```: Calculate time-trace of radius of gyration of the system.
+11. ```contacts.py```: Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
+12. ```center.py```: Recenter selected atoms in the trajectory.
 
 All the programs can be used as stand-alone codes or may be used as modules imported in external codes.
 
