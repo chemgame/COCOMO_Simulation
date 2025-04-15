@@ -18,7 +18,8 @@ Functionality of all codes are available via code_name.py -h
 The COCOMO force field defines a single-bead-per-residue coarse grained model for molecular dynamics of proteins and RNA. This helps accelerate simulations of processes such as biocondensate formation via liquid-liquid phase separation. Please read the papers in the reference for details.
 This repositiory contains the following codes:
 
-### ```seq2len.py```: This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
+### seq2len.py
+This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
 ```
 usage: seq2len.py [-h] -s
 
@@ -28,7 +29,8 @@ options:
   -h, --help        show this help message and exit
   -s , --sequence   Protein sequence (str)
 ```
-### ```gen_slab.py```: This code generates the intitial simulation box. It takes a sequence file as an input. This file must have three coulmns: PRO/RNA number-of-chains sequence. PRO/RNA tells the code the type of biomolecule to consider. Initially chains can be placed near the box center or randomly inthe box. The initial chain configuration can be coiled or straight.
+### ```gen_slab.py```
+This code generates the intitial simulation box. It takes a sequence file as an input. This file must have three coulmns: PRO/RNA number-of-chains sequence. PRO/RNA tells the code the type of biomolecule to consider. Initially chains can be placed near the box center or randomly inthe box. The initial chain configuration can be coiled or straight.
 ```
 usage: gen_slab.py [-h] -s  -o  -box    [-d] [-g] [-p]
 
@@ -45,7 +47,8 @@ options:
   -g , --geometry       Geometry for chain generation: 'straight' or 'coil'. Default: 'straight'.
   -p , --position       Positioning of chains in the box: 'center' or 'random'. Default: 'center'.
 ```
-### ```genpdb_cocomo.py```: This code generates a pdb file that is compatible with the way the cocomo scripts deermine system topology.
+### ```genpdb_cocomo.py```
+This code generates a pdb file that is compatible with the way the cocomo scripts deermine system topology.
 ```
 Generate input PDB for COCOCMO simulation
 
@@ -59,7 +62,8 @@ I/O:
 Elastic network:
   -el , --elastic   Chains for elastic bonds (str) [default: " "]
 ```
-### ```cocomo.py```/```cocomo2.py```: These are the main force field and simulation scripts for COCOMO and COCOMO2.
+### ```cocomo.py```/```cocomo2.py```
+These are the main force field and simulation scripts for COCOMO and COCOMO2.
 ```
 usage: cocomo.py [-h] [-prm]
 
@@ -69,12 +73,18 @@ options:
   -h, --help            show this help message and exit
   -prm , --parameters   Input parameter file (str) [default: params.dat]
 ```
-### ```dcd2pdbFrame.py```: This scripts generates PDB file from a a DCD trajectory. The time frame can be given as input. By default it generates the PDB for the last frame.
-### ```simulation.py```: This scripts streamliunes the simulation process. It takes a configuration (YAML format) as input.
-### ```gen_config.py```: Generates a YAML configuration file for the simulation. Be default it generates the default configurations. These can be tuned using user-input flags.
-### ```gyrate.py```: Calculate time-trace of radius of gyration of the system.
-### ```contacts.py```: Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
-### ```center.py```: Recenter selected atoms in the trajectory.
+### ```dcd2pdbFrame.py```
+This scripts generates PDB file from a a DCD trajectory. The time frame can be given as input. By default it generates the PDB for the last frame.
+### ```simulation.py```
+This scripts streamliunes the simulation process. It takes a configuration (YAML format) as input.
+### ```gen_config.py```
+Generates a YAML configuration file for the simulation. Be default it generates the default configurations. These can be tuned using user-input flags.
+### ```gyrate.py```
+Calculate time-trace of radius of gyration of the system.
+### ```contacts.py```
+Calculate number of intra- and inter-chain contacts in the simulation trajectory (normalized with respect to the maximum possible contacts).
+### ```center.py```
+Recenter selected atoms in the trajectory.
 
 All the programs can be used as stand-alone codes or may be used as modules imported in external codes.
 
