@@ -3,9 +3,9 @@ The COCOMO force field defines a single-bead-per-residue coarse grained model fo
 Functionality of all codes are available via ```code_name.py -h```. I **do not** own rights to this force field. I have developed some codes that helps the user run simulations using the COCOMO force field in a streamlined fashion.
 
 ## Table of contents
-- [References](#References)
-- [seq2len.py](#seq2len.py)
-- [gen_slab.py](#gen_slab.py)
+- [References](##References)
+- [seq2len.py](##seq2len.py)
+- [gen_slab.py](##gen_slab.py)
 
 ## References
 1) [J. Chem. Theory Comput. 2023, 19, 2, 669–678.](https://doi.org/10.1021/acs.jctc.2c00856)
