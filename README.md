@@ -8,16 +8,16 @@ The COCOMO force field defines a single-bead-per-residue coarse grained model fo
 The following codes are included in this repository:
 
 ## Table of contents
-- [seq2len.py](#seq2len.py)
-- [gen_slab.py](#gen_slab.py)
-- [genpdb_cocomo.py](#genpdb_cocomo.py)
-- [cocomo.py/cocomo2.py](#cocomo.py/cocomo2.py)
-- [dcd2pdbFrame.py](#dcd2pdbFrame.py)
-- [simulation.py](#simulation.py)
-- [gen_config.py](#gen_config.py)
-- [gyrate.py](#gyrate.py)
-- [contacts.py](#contacts.py)
-- [center.py](#center.py)
+- [seq2len.py](#seq2lenpy)
+- [gen_slab.py](#gen_slabpy)
+- [genpdb_cocomo.py](#genpdb_cocomopy)
+- [cocomo.py/cocomo2.py](#cocomopycocomo2py)
+- [dcd2pdbFrame.py](#dcd2pdbFramepy)
+- [simulation.py](#simulationpy)
+- [gen_config.py](#gen_configpy)
+- [gyrate.py](#gyratepy)
+- [contacts.py](#contactspy)
+- [center.py](#centerpy)
 
 ### seq2len.py
 This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
