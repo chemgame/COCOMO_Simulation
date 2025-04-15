@@ -91,7 +91,7 @@ Required arguments:
   -dump , --dumpframe   Time frame to extract in ps (float) [default: -1]
 ```
 ### simulation.py
-This scripts streamliunes the simulation process. It takes a configuration (YAML format) as input.
+This scripts streamlines the simulation process. It takes a configuration (YAML format) as input.
 ```
 usage: simulation.py [-h] [-c]
 
