@@ -4,9 +4,10 @@ Functionality of all codes are available via ```code_name.py -h```. I **do not**
 
 ## Table of contents
 - [References](#References)
-- [seq2len.py](#seq2len.py)
+- [seq2len.py](#```seq2len.py```)
 - [gen_slab.py](#gen_slab.py)
-- [genpdb_cocomo.py](genpdb_cocomo,py)
+- [genpdb_cocomo.py](#genpdb_cocomo,py)
+- [cocomo.py/cocomo2.py](#cocomo.py/cocomo2.py)
 
 ## References
 1) [J. Chem. Theory Comput. 2023, 19, 2, 669–678.](https://doi.org/10.1021/acs.jctc.2c00856)
@@ -14,7 +15,7 @@ Functionality of all codes are available via ```code_name.py -h```. I **do not**
 
 The following codes are included in this repository:
 
-## seq2len.py
+## ```seq2len.py```
 This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
 ```
 usage: seq2len.py [-h] -s
