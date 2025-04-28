@@ -1,4 +1,4 @@
-# cocomo
+# COCOMO_Simulation
 The COCOMO force field defines a single-bead-per-residue coarse grained model for molecular dynamics of proteins and RNA. This helps accelerate simulations of processes such as biocondensate formation via liquid-liquid phase separation. Please read the papers in the reference for details. This repository contains codes to run MD simulations using the COCOMO/COCOMO2 force field developed by Feig and coworkers. Although the COCOMO2 model supports simulations of multidomain proteins, this functionality is not yet included in this repository. The current version supports IDR/RNA simulations only. Functionality of all codes are available via ```code_name.py -h```. I **do not** own rights to this force field. I have developed some codes that helps the user run simulations using the COCOMO force field in a streamlined fashion.
 
 ### References
