@@ -231,6 +231,20 @@ options:
   -e , --end            Index of the ending frame for processing (-1 for last frame)
   -sk , --skip          Skip interval between frames
 ```
+### interaction_energy.py
+Compute the time-trace of interaction energy between two chains idensitifed by either chainID (A, B, ...) or segid (P000, R001, ...).
+```
+usage: interaction_energy.py [-h] -f  -s  -c  -p  [-m] [-o]
+
+options:
+  -h, --help          show this help message and exit
+  -f , --trajectory   Trajectory file (DCD)
+  -s , --topology     Topology file (PSF)
+  -c , --pdbfile      Structure file (PDB)
+  -p , --pairs        Comma-separated chain pairs, e.g. A:A,B:C, or P000:P001, etc.
+  -m , --mode         Energy mode to compute. Default = nonbonded
+  -o , --output       Output file prefix. Default = interaction
+```
 All the programs can be used as stand-alone codes or may be imported as modules in external codes.
 
 ## Contact
