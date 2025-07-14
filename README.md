@@ -18,7 +18,7 @@ The following codes are included in this repository:
 - [gyrate.py](#gyratepy)
 - [contacts.py](#contactspy)
 - [center.py](#centerpy)
-- [interaction_energy.py](#interactionenergypy)
+- [interaction_energy.py](#interaction_energypy)
 
 ### seq2len.py
 This script determines the length of a protein/RNA chain if all beads were arranged linearly, based on the sigma (diameter) values listed in the force field parameters. This helps in approximating the minimum box dimensions if all chains were initially generated as linear. It requires the sequence string (1-letter names) as an input.
