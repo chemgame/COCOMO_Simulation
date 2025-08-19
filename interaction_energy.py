@@ -64,8 +64,8 @@ def parse_args():
     parser.add_argument('-m', '--mode',       default='nonbonded', metavar="",
                         choices=['bonded', 'nonbonded', 'both'],
                         help='Energy mode to compute. Default = nonbonded')
-    parser.add_argument('-o', '--output',     default='interaction', metavar="",
-                        help='Output file prefix. Default = interaction')
+    parser.add_argument('-o', '--output',     default='interaction_energy.dat', metavar="",
+                        help='Output file name. Default = interaction_energy.dat')
     return parser.parse_args()
 
 def get_chain_indices(pdb, cid):
@@ -226,7 +226,7 @@ def main():
     for i, ((c1, c2), _, _) in enumerate(chain_pairs):
         Ets = np.array([fr[(c1, c2)] for fr in all_results])
         mu, sigma = Ets.mean(), Ets.std()/np.sqrt(len(Ets))
-        fname = f"{args.output}_{c1}_{c2}.dat"
+        fname = {args.output}
         with open(fname, 'w') as f:
             f.write(f"# mean={mu:.3f} kJ/mol   std={sigma:.3f} kJ/mol\n")
             f.write("# time(ps)    energy(kJ/mol)\n")
