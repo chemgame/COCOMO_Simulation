@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import warnings
 import argparse
 import numpy as np
 import MDAnalysis as mda
@@ -158,6 +159,12 @@ def nonbonded_energy(pos, idx1, idx2,
 
 def main():
     args = parse_args()
+
+    warnings.filterwarnings(
+    "ignore",
+    category=DeprecationWarning,
+    message="DCDReader currently makes independent timesteps*"
+    )
 
     # load Universe
     u = mda.Universe(args.topology, args.trajectory)
