@@ -248,5 +248,21 @@ options:
 ```
 All the programs can be used as stand-alone codes or may be imported as modules in external codes.
 
+### density_profile.py
+usage: density_profile.py [-h] -trj  -top  -ch  [...] [-bins] [-b] [-e] [-o] [-batch]
+
+Generate averaged density profiles along the z-axis for each protein chain
+
+options:
+  -h, --help   show this help message and exit
+  -trj         Path to the trajectory file (DCD)
+  -top         Path to the topology file (PDB)
+  -ch  [ ...]  List of protein names
+  -bins        Number of bins along the z-axis (Default = 500)
+  -b           Start frame for analysis (Default = 0)
+  -e           End frame for analysis (Default = last frame)
+  -o           Output file name for the plot (Default = dens_ChainA-ChainB-...jpg)
+  -batch       Number of frames to process at once (Default = 50)
+
 ## Contact
 saumyak.mukherjee@biophys.mpg.de
