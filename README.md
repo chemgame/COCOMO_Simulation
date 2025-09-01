@@ -249,6 +249,7 @@ options:
 All the programs can be used as stand-alone codes or may be imported as modules in external codes.
 
 ### density_profile.py
+```
 usage: density_profile.py [-h] -trj  -top  -ch  [...] [-bins] [-b] [-e] [-o] [-batch]
 
 Generate averaged density profiles along the z-axis for each protein chain
@@ -263,6 +264,7 @@ options:
   -e           End frame for analysis (Default = last frame)
   -o           Output file name for the plot (Default = dens_ChainA-ChainB-...jpg)
   -batch       Number of frames to process at once (Default = 50)
+```
 
 ## Contact
 saumyak.mukherjee@biophys.mpg.de
